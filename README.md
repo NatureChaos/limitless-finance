@@ -6,6 +6,11 @@ Limitless Finance is a beginner-friendly budgeting application I built to practi
 
 I wanted to create something useful while also challenging myself to learn more about HTML, CSS, and JavaScript. I chose a Gojo-inspired theme with blue and purple colors to give the application its own style.
 
+
+## Application Preview
+
+![Limitless Finance Dashboard](images/limitless-finance-preview.png)
+
 ## Features
 
 - **Budget Dashboard:** Displays total balance, income, and expenses.

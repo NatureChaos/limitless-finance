@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Limitless Finance</title>
+    <link rel="stylesheet" href="styles.css" />
+    
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="hero">
+        <div class="hero-content">
+          <p class="hero-subtitle">THE INFINITY COLLECTION</p>
+          <h1>LIMITLESS FINANCE</h1>
+          <div class="title-line"></div>
+          <p class="hero-description">
+            Master Your Money. Control Your Domain. Unleash Your Potential.
+          </p>
+        </div>
+      </header>
+
+
+      <section class="summary-grid" aria-label="Budget summary">
+        <article class="card">
+          <h2>Infinity Balance</h2>
+          <p id="balance">$0.00</p>
+        </article>
+        <article class="card income-card">
+          <h2>Cursed Energy Gained </h2>
+          <p id="income">$0.00</p>
+        </article>
+        <article class="card expense-card">
+          <h2>Technique Usage</h2>
+          <p id="expense">$0.00</p>
+        </article>
+        <article class="card savings-card">
+            <h2>Domain Expansion Progress</h2>
+            <p id="savings-goal">0%</p>
+            <p id="savings-details">$0.00 saved</p>
+        <form id="savings-form">
+          <label for="savings-amount">My Savings Amount</label>
+          <input
+              type="number"
+              id="savings-amount"
+              placeholder="Example: 1000"
+              min="0"
+              step="0.01"
+              required
+          />
+          
+            <label for="savings-target">My Savings Goal</label>
+            <input
+                type="number"
+                id="savings-target"
+                placeholder="Example: 5000"
+                min="0.01"
+                step="0.01"
+                required
+            />
+
+        <button type="submit" id="update-savings-target">Update Savings Target</button>
+        </form>
+        </article>
+      </section>
+
+
+      <section class="tracker-panel">
+        <form id="transaction-form" class="transaction-form">
+          <h2>Add a transaction</h2>
+          <label for="description">Description</label>
+          <input type="text" id="description" placeholder="Groceries, salary, rent..." required />
+
+
+          <label for="amount">Amount</label>
+          <input type="number" id="amount" placeholder="e.g. $200000.00 or -$50000.00" step="0.01" required />
+
+
+          <div class="button-row">
+            <button type="submit">Add transaction</button>
+            <button type="button" id="clear-all" class="secondary">Clear all</button>
+          </div>
+        </form>
+
+
+        <div class="transaction-list-panel">
+          <div class="list-header">
+            <h2>Transactions</h2>
+            <div class="filters">
+              <button type="button" class="filter-btn active" data-filter="all">All</button>
+              <button type="button" class="filter-btn" data-filter="income">Income</button>
+              <button type="button" class="filter-btn" data-filter="expense">Expense</button>
+            </div>
+          </div>
+          <ul id="transaction-list" class="transaction-list" aria-live="polite"></ul>
+        </div>
+      </section>
+    </main>
+
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
+

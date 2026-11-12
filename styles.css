@@ -1,0 +1,443 @@
+
+/* Floating GOJO Header */
+
+.hero {
+    text-align:center;
+    padding: 55px 20px 45px;
+
+    background: transparent;
+
+    border: none;
+
+    box-shadow: none;
+
+    backdrop-filter:none;
+}
+
+.hero-content {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+/* Small heading above the main title */
+
+.hero-subtitle {
+    font-size: 12px;
+    color: #7dd3fc;
+    font-weight: 600;
+    letter-spacing: 6px;
+    margin-bottom: 15px;
+    text-shadow: 0 0 12px rgba(125, 211, 252, 0.8);
+}
+
+/* Main title */
+
+.hero h1 {
+    font-size: clamp(2.3rem, 6vw, 4.5rem);
+    font-weight: 900;
+    letter-spacing: 5px;
+    color: #ffffff;
+    text-shadow:
+        0 0 10px rgba(0, 174, 255, 0.8),
+        0 0 25px rgba(0, 140, 255, 0.6),
+        0 0 45px rgba(0, 100, 255, 0.4);
+    margin: 0;
+}
+
+/* Blue decorative line under the title */
+
+.title-line {
+    width: 120px; 
+    height: 3px;
+    margin: 20px auto;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #00bfff,
+        #a855f7,
+        transparent
+    );
+    box-shadow: 0 0 15px #00bfff;
+}
+
+/* Description */
+
+.hero-description {
+    color: #dbeafe;
+    font-size: 15px;
+    letter-spacing: 1px;
+    line-height: 1.8;
+    max-width: 650px;
+    margin: 0 auto;
+    text-shadow: 0 2px 8px #000000;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+
+    background:
+        linear-gradient(
+            rgba(3, 8, 25, 0.35),
+            rgba(3, 8, 25, 0.55)
+        ),
+        url("images/gojo-background.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+
+    color: white;
+   
+}
+
+/* GOJO GLASS DASHBOARD CARD */
+
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.card {
+    background: rgba(8, 25, 55, 0.45);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(80, 180, 255, 0.35);
+    border-radius: 18px;
+    padding: 25px;
+    box-shadow: 0 0 15px rgba(0, 140, 255, 0.15);
+    transition: all 0.3s ease;
+}
+
+/* Card Hover Effects */
+
+.card:hover {
+    transform: translateY(-7px);
+    border-color: #38bdf8;
+    box-shadow: 0 0 15px rgba(0, 174, 255, 0.5),
+                0 0 30px rgba(0, 100, 255, 0.2);
+
+}
+
+/* Card Headings */
+
+.card h2 {
+    color: #bae6fd;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+/* Financial Numbers */
+
+.card p {
+    color: white;
+    font-size: 27px;
+    font-weight: bold;  text-shadow: 0 0 12px rgba(0, 174, 255, 0.7);
+}
+
+/* Income - Blue Energy */
+
+.income-card {
+    border-left: 4px solid #00bfff;
+}
+
+/* Expenses - Purple Energy */
+
+.expense-card {
+    border-left: 4px solid #a855f7;
+}
+
+/* Savings - Infinity Energy */
+
+.savings-card {
+    border-left: 4px solid #ffffff;
+}
+
+/* Mobile Responsive Layout */
+
+@media (max-width: 900px) {
+    .summary-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+
+@media (max-width: 550px) {
+    .summary-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* GOJO TRANSACTION PANEL */
+
+.tracker-panel {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap:25px;
+    margin-top: 30px;
+}
+
+/* Glass Effect */
+
+.tracker-panel > * {
+    background: rgba(5, 20, 45, 0.55);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 0 15px rgba(0, 140, 255, 0.12);
+}
+
+/* Panel Headings */
+
+.tracker-panel h2 {
+    color: #7dd3fc;
+    letter-spacing: 1px;
+    margin-top: 0;
+}
+
+/* Form Layout */
+
+.transaction-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Labels */
+
+.transaction-form label {
+    color: #dbeafe;
+    font-size: 14px;
+}
+
+/* Inputs Fields */
+
+.transaction-form input {
+    background: rgba(3, 10, 30, 0.8);
+    color: white;
+    border: 1px solid #0284c7;
+    border-radius: 10px;
+    padding: 13px;
+    outline: none;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.transaction-form input:focus {
+    border-color: #38bdf8;
+    box-shadow: 0 0 15px rgba(0, 174, 255, 0.5);
+}
+
+/* Buttons */
+
+.transaction-form button,
+.filter-btn {
+    background: linear-gradient(135deg, #0284c7, #4f46e5);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.transaction-form button:hover,
+.filter-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 15px #0284c7;
+}
+
+/* Clear All Button */
+
+.transaction-form button.secondary {
+    background: linear-gradient(135deg, #7e22ce, #4c1d95);
+}
+
+/* Button Spacing */
+
+.button-row {
+    display: flex;
+    gap: 12px;
+    margin-top: 12px;
+    flex-wrap: wrap;
+}
+
+/* Transaction List */
+
+.transaction-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0;
+}
+
+.transaction-list li {
+    background: rgba(30, 64, 110, 0.35);
+    border: 1px solid rgba(125, 211, 252, 0.2);
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 12px;
+    color: white;
+}
+
+.transaction-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.transaction-list li span {
+    flex: 1;
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.transaction-list li strong {
+   white-space: nowrap;
+   text-align: right;
+}
+
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 800px) {
+    .tracker-panel {
+        grid-template-columns: 1fr;
+    }
+}
+
+.savings-panel {
+    margin: 25px 0;
+    padding: 25px;
+    background: rgba(5, 20, 45, 0.65);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(56, 189 248, 0.35);
+    border-radius: 18px;
+    box-shadow: 0 0 20px rgba(0, 140, 255, 0.15);
+}
+
+.savings-panel h2 {
+    color: #7dd3fc;
+}
+
+.saving-panel form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.savings-panel label {
+    color: #dbeafe;
+}
+
+.savings-panel input {
+    padding: 12px;
+    color: white;
+    background: rgba(3, 10, 30, 0.8);
+    border: 1px solid #0284c7;
+    border-radius: 10px;
+}
+
+.savings-panel button {
+    padding: 14px;
+    margin-top: 8px;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 1px;
+    background: linear-gradient(135deg, #0284c7, #6d28d9);
+    border: 1px solid rgba(125, 211, 252, 0.5);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.savings-panel button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 18px rgba(0, 174, 255, 0.55);
+}
+
+/* End of Savings Panel Styles */
+
+/* Savings Tracker - GOJO THEME */
+
+.savings-panel {
+    margin-top: 30px;
+    padding: 25px;
+    background: rgba(5, 20, 45, 0.55);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 140, 255, 0.12);
+    transition: all 0.3s ease;
+}
+
+.savings-panel:hover {
+    border-color: #38bdf8;
+    box-shadow: 0 0 18px rgba(0, 174, 255, 0.4);
+}
+
+.savings-panel h2 {
+    color: #7dd3fc;
+    letter-spacing: 1px;
+    margin-top: 0;
+}
+
+/* Savings form layout */
+#savings-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#savings-form label {
+    color: #dbeafe;
+    font-size: 14px;
+}
+
+/* Savings input boxes */
+#savings-form input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 13px;
+    background: rgba(3, 10, 30, 0.8);
+    color: white;
+    border: 1px solid #0284c7;
+    border-radius: 10px;
+    outline: none;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+#savings-form input:focus {
+    border-color: #38bdf8;
+    box-shadow: 0 0 15px rgba(0, 174, 255, 0.5);
+}
+
+#savings-form input::placeholder {
+    color: #94a3b8;
+    opacity: 1;
+}
+
+/* Update savings button */
+#savings-form button {
+    background: linear-gradient(135deg, #0284c7, #4f46e5);
+    color: white;
+    border: 1px solid rgba(125, 211, 252, 0.3);
+    padding: 12px 18px;
+    margin-top: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#savings-form button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 15px #0284c7;
+}
